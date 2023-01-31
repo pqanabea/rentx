@@ -1,5 +1,5 @@
 import { inject, injectable } from 'tsyringe';
-import { AppError } from '../../../../errors/AppError';
+import { AppError } from '@shared/errors/AppError';
 
 import { ICategoriesRepository } from '../../repositories/ICategoriesRepository';
 
@@ -9,7 +9,7 @@ interface IRequest {
 }
 
 @injectable()
-class CreateCategoryUsecase {
+class CreateCategoryUseCase {
     constructor(
         @inject('CategoriesRepository')
         private categoriesRepository: ICategoriesRepository,
@@ -26,4 +26,4 @@ class CreateCategoryUsecase {
         this.categoriesRepository.create({ name, description });
     }
 }
-export { CreateCategoryUsecase };
+export { CreateCategoryUseCase };

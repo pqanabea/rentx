@@ -1,4 +1,3 @@
-import { AppError } from './../../../../errors/AppError';
 import { Request, Response } from 'express';
 import { container } from 'tsyringe';
 
